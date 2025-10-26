@@ -1,0 +1,116 @@
+# 🧠 Resume Screening App
+
+An intelligent **Resume Screening System** built using **Natural Language Processing (NLP)** and **Machine Learning**.  
+The app helps HR professionals and recruiters **automatically analyze and classify resumes** to identify the most suitable candidates based on their skills, experience, and job category.
+
+---
+
+## 📋 Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Details](#model-details)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
+
+---
+
+## 🧩 Overview
+The **Resume Screening App** allows users to upload a resume (in PDF format).  
+It processes the text using NLP techniques (tokenization, cleaning, vectorization) and then predicts the **job domain** (e.g., Data Science, Web Development, Network Security, Health & Fitness, etc.) using a trained machine learning model.
+
+The app is deployed using **Streamlit**, providing a simple and interactive web interface.
+
+---
+
+## ✨ Features
+✅ Upload resumes in PDF or TXT format.  
+✅ Automatically extract and clean text from the resume.  
+✅ Predict the most suitable job category using a trained model.  
+✅ Display predictions in a clear, user-friendly Streamlit interface.  
+
+---
+
+## 🧠 Tech Stack
+| Category | Tools |
+|-----------|-------|
+| Language | Python 3.8 |
+| Framework | Streamlit |
+| NLP Libraries | NLTK, scikit-learn |
+| Data Handling | Pandas, NumPy |
+| Model Storage | Pickle |
+| Visualization | Matplotlib / Seaborn (optional) |
+
+---
+
+## 📂 Project Structure
+Resume analyser/
+│
+├── app.py # Main Streamlit application
+│
+├── data/
+│ ├── ResumeDataSet.csv # Training dataset
+│ └── analysis_data.ipynb # Data analysis notebook
+│
+├── models/
+│ ├── vectorizer.pkl # TF-IDF vectorizer
+│ ├── encoding labels.pkl # Encoded label mapping
+│ └── KNC model.pkl # Trained K-Nearest Neighbors model
+│
+├── preprocess/
+│ ├── clean_data.py # Text cleaning and preprocessing
+│ └── vectorization.py # Text vectorization logic
+│
+├── models/
+│ └── saving needed models and files
+│
+├── train/
+│ ├── train_model.py # Model training script
+│ └── deploy_pipeline.py # Prediction pipeline
+│
+├── README.md
+│
+└── requirements.txt
+
+🚀 Usage
+
+Launch the Streamlit app.
+
+Upload a resume file (.pdf).
+
+Wait a few seconds for the system to analyze and classify it.
+
+View the predicted job domain and other extracted information.
+
+🧬 Model Details
+
+Algorithm: K-Nearest Neighbors (KNN)
+
+Vectorization: TF-IDF
+
+Preprocessing: Stopword removal, punctuation cleaning, tokenization
+
+Training Data: 2400+ labeled resumes across multiple job domains
+
+🔮 Future Improvements
+
+Add Named Entity Recognition (NER) for skill extraction.
+
+Integrate deep learning models (e.g., BERT) for better accuracy.
+
+Enable batch processing of multiple resumes.
+
+Add visualization dashboards for HR insights.
+
+Deploy the app on the web (e.g., Streamlit Cloud / Heroku / AWS).
+
+👨‍💻 Author
+
+Ahmed Ghoneim
+💼 Passionate about NLP and Machine Learning.
+📧 [ahmedghoneim658@gmail.com]
+🌍 [LinkedIn Profile : https://www.linkedin.com/in/ahmed-ghoneim-3450892b7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app 
+   GitHub Profile : https://github.com/Ahmed-M-Gh ]
