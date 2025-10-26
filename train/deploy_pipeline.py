@@ -11,10 +11,10 @@ class Dep_pipeline:
         X = vec.load_vectorizer(txt)
         
         
-        model = jb.load(r'\models\KNC model.pkl')
+        model = jb.load(r'models/KNC model.pkl')
         predict = model.predict(X)
         
-        lb = jb.load(r'\models\encoding labels.pkl')
+        lb = jb.load(r'models/encoding labels.pkl')
         prediction_name = lb.inverse_transform(predict)
         return prediction_name
         
