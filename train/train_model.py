@@ -7,7 +7,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.metrics import accuracy_score
 import joblib as jb
-df = pd.read_csv(r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\NLP Projects\Resume analyser\data\ResumeDataSet.csv')
+df = pd.read_csv(r'\data\ResumeDataSet.csv')
 
 print('[Cleaning] start cleaning....')
 df['Resume'] = df['Resume'].apply(lambda x: Cleaner(x).Clean_Resume())
@@ -17,7 +17,7 @@ print('[Encoding] start encoding target column....')
 lb = LabelEncoder()
 lb.fit(df['Category'])
 Y = lb.transform(df['Category'])
-jb.dump(lb, r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\NLP Projects\Resume analyser\models\encoding labels.pkl')
+jb.dump(lb, r'\models\encoding labels.pkl')
 print('[Encoding] encoding target column completed successfully')
 
 print('[Vectorization] start to vectorization the resume....')
@@ -37,5 +37,5 @@ print(f'[Evaluation] accuracy score = {acc}')
 
 
 print('[Saving] saving model....')
-jb.dump(KNC, r'C:\I will prepare my self to destroy the world\Programming\python program\MY Projects\NLP Projects\Resume analyser\models\KNC model.pkl')
+jb.dump(KNC, r'\models\KNC model.pkl')
 print('[Saving] model saved successfully')
