@@ -1,7 +1,8 @@
+streamlit
 scikit-learn
-pandas 
+pandas
 numpy
 matplotlib
 seaborn
-re
+nltk
 joblib
